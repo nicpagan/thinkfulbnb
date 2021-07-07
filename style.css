@@ -1,7 +1,6 @@
 /* -------  General Styles ------- */
-
 body {
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 h2 {
@@ -26,16 +25,15 @@ section {
 }
 
 section.alternate-background {
-  background-color: #00a699;
+  background-color: #00A699;
   color: #fff;
 }
 
 main img {
-  width: 100px;
+  width: 100%;
 }
 
 /* ---  Groups & Items --- */
-
 .group {
   display: flex;
   flex-direction: column;
@@ -51,9 +49,8 @@ main img {
 }
 
 /* -------  Navigation ------- */
-
 header {
-  background-color: #ff385c;
+  background-color: #FF385C;
   padding: 20px 20px 0 20px;
   text-align: center;
 }
@@ -62,6 +59,17 @@ header {
   font-family: "Pangolin", cursive;
   font-size: 72px;
   color: #fff;
+}
+
+/* styles nav tag in header tag*/
+header nav {
+  display: flex;
+  justify-content: center;
+}
+
+/* styles unordered list under nav tag under header */
+header nav ul {
+  display: flex;
 }
 
 header nav ul li {
@@ -81,12 +89,18 @@ header nav ul li a:hover {
 
 /* -------  Search Form ------- */
 form {
-  border: 2px solid #ff385c;
+  border: 2px solid #FF385C;
   padding: 10px;
 }
 
 form label {
   font-weight: bold;
+}
+
+/* styles div tag under form tag */
+form div {
+  display: flex;
+  justify-content: space-between;
 }
 
 form select,
@@ -96,7 +110,7 @@ form input {
 }
 
 form button {
-  background-color: #ff385c;
+  background-color: #FF385C;
   border: none;
   color: #fff;
   font-size: 24px;
@@ -105,9 +119,8 @@ form button {
 }
 
 /* -------  Footer ------- */
-
 footer {
-  background-color: #ff385c;
+  background-color: #FF385C;
 }
 
 footer p {
@@ -115,5 +128,46 @@ footer p {
   text-align: center;
   padding: 20px;
 }
-
 /* -------  Media Query ------- */
+/* Once screen is smaller than 700px, apply these styles */
+@media all and (min-width: 700px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  .logo {
+    margin: 14px 0 14px 20px;
+    padding-top: 0;
+    font-size: 42px;
+  }
+
+  header nav ul {
+    align-items: center;
+  }
+
+  .group {
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  form div {
+    flex-direction: column;
+  }
+
+  form button {
+    flex: 1;
+  }
+
+  form select,
+  form input {
+    margin-bottom: 0px;
+  }
+}
