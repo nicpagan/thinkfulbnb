@@ -129,7 +129,7 @@ footer p {
   padding: 20px;
 }
 /* -------  Media Query ------- */
-/* Once screen is smaller than 480px, apply these styles */
+/* Once screen is larger than 480px, apply these styles */
 @media all and (min-width: 480px) {
   header {
     display: flex;
